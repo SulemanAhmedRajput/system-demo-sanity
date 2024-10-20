@@ -1,27 +1,27 @@
 import {defineArrayMember, defineField, defineType} from 'sanity'
 
 export default defineType({
-  name: 'project',
+  name: 'product',
   type: 'document',
-  title: 'Project',
+  title: 'Product',
   fields: [
     defineField({
       name: 'title',
       type: 'string',
-      title: 'Title of the project',
+      title: 'Title of the product',
     }),
     defineField({
       name: 'slug',
       type: 'slug',
-      title: 'Slug of the project',
+      title: 'Slug of the product',
       options: {
         source: 'title',
       },
     }),
     defineField({
-      name: 'projectImage',
+      name: 'productImage',
       type: 'image',
-      title: 'Image of the project',
+      title: 'Image of the product',
       options: {
         // Add alt text for the image
         metadata: ['lqip'],
@@ -41,9 +41,9 @@ export default defineType({
       ],
     }),
     defineField({
-      name: 'smallProjectDescription',
+      name: 'smallProductDescription',
       type: 'string',
-      title: 'Title Small Description of the Single Project',
+      title: 'Title Small Description of the Single Product',
     }),
     defineField({
       name: 'content',
@@ -55,7 +55,7 @@ export default defineType({
       name: 'technologies',
       type: 'array',
       title: 'Technologies Used',
-      description: 'List of technologies used in the project',
+      description: 'List of technologies used in the product',
       of: [defineArrayMember({type: 'string'})],
       options: {
         layout: 'tags',
@@ -65,7 +65,7 @@ export default defineType({
       name: 'createdAt',
       type: 'datetime',
       title: 'Created At',
-      description: 'Date and time when the project was created',
+      description: 'Date and time when the product was created',
     }),
   ],
 })
